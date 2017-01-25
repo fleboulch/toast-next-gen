@@ -7,6 +7,16 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "conventionStage": "Convention Stage",
+                "tuteur": "Tuteur",
+                "etudiant": "Etudiant",
+                "entreprise": "Entreprise",
+                "groupe": "Groupe",
+                "site": "Site",
+                "entreprisePartenaire": "Entreprise Partenaire",
+                "diplome": "Diplome",
+                "filiere": "Filiere",
+                "promotion": "Promotion",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
