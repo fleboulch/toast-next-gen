@@ -1,0 +1,62 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "entreprise",
+            "otherEntityName": "entreprise",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "siege",
+            "otherEntityName": "conventionStage",
+            "otherEntityRelationshipName": "siege"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "lieuStage",
+            "otherEntityName": "conventionStage",
+            "otherEntityRelationshipName": "lieuStage"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "adresse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codePostal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ville",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pays",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "siege",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debutVersion",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "finVersion",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170125140817",
+    "entityTableName": "site",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

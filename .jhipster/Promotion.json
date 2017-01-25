@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "filiere",
+            "otherEntityName": "filiere",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "annee",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170125140821",
+    "entityTableName": "promotion",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

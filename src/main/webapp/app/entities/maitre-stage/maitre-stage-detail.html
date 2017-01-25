@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="crmisticApp.maitreStage.detail.title">Maitre Stage</span> {{vm.maitreStage.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="crmisticApp.maitreStage.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.nom}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.prenom}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.telephone}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.mail">Mail</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.mail}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.fonction">Fonction</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.fonction}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.ancienEtudiant">Ancien Etudiant</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.ancienEtudiant}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.debutVersion">Debut Version</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.debutVersion}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.maitreStage.finVersion">Fin Version</span></dt>
+        <dd>
+            <span>{{vm.maitreStage.finVersion}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="maitre-stage-detail.edit({id:vm.maitreStage.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
