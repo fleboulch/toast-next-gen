@@ -1,0 +1,37 @@
+
+<div>
+    <h2><span data-translate="crmisticApp.entreprisePartenaire.detail.title">Entreprise Partenaire</span> {{vm.entreprisePartenaire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="crmisticApp.entreprisePartenaire.dateDebut">Date Debut</span></dt>
+        <dd>
+            <span>{{vm.entreprisePartenaire.dateDebut | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.entreprisePartenaire.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{vm.entreprisePartenaire.dateFin | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.entreprisePartenaire.entreprise">Entreprise</span></dt>
+        <dd>
+            <a ui-sref="entreprise-detail({id:vm.entreprisePartenaire.entrepriseId})">{{vm.entreprisePartenaire.entrepriseId}}</a>
+        </dd>
+        <dt><span data-translate="crmisticApp.entreprisePartenaire.diplome">Diplome</span></dt>
+        <dd>
+            <span ng-repeat="diplome in vm.entreprisePartenaire.diplomes">
+                <a ui-sref="diplome-detail({id: diplome.id})">{{diplome.nom}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="entreprise-partenaire-detail.edit({id:vm.entreprisePartenaire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

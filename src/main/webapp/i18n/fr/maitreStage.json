@@ -1,0 +1,30 @@
+{
+    "crmisticApp": {
+        "maitreStage" : {
+            "home": {
+                "title": "MaitreStages",
+                "createLabel": "Créer un nouveau Maitre Stage",
+                "createOrEditLabel": "Créer ou éditer un Maitre Stage",
+                "search": "Recherche pour Maitre Stage"
+            },
+            "created": "Un nouveau Maitre Stage a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Maitre Stage avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Maitre Stage avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Maitre Stage {{ id }} ?"
+            },
+            "detail": {
+                "title": "Maitre Stage"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "telephone": "Telephone",
+            "mail": "Mail",
+            "fonction": "Fonction",
+            "ancienEtudiant": "Ancien Etudiant",
+            "debutVersion": "Debut Version",
+            "finVersion": "Fin Version",
+            "conventionStage": "Convention Stage"
+        }
+    }
+}

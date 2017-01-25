@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "conventionStage",
+            "otherEntityName": "conventionStage",
+            "otherEntityRelationshipName": "maitreStage"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fonction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ancienEtudiant",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "debutVersion",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "finVersion",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170125143352",
+    "entityTableName": "maitre_stage",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}
