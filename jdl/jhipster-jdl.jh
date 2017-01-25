@@ -10,6 +10,13 @@ entity Tuteur {
 	nom String,
     prenom String,
     telephone String,
+    mail String
+}
+
+entity MaitreStage {
+	nom String,
+    prenom String,
+    telephone String,
     mail String,
     fonction String,
     ancienEtudiant Boolean,
@@ -23,7 +30,6 @@ entity Etudiant {
     mail String,
     sexe String,
     numEtudiant String required
-
 }
 
 // an ignored comment
@@ -52,17 +58,18 @@ entity Site {
     debutVersion Long,
     finVersion Long
 }
+entity Diplome {
+	nom String required,
+    debutVersion Long,
+    finVersion Long
+}
 
 entity EntreprisePartenaire {
 	dateDebut ZonedDateTime,
     dateFin ZonedDateTime
 }
 
-entity Diplome {
-	nom String required,
-    debutVersion Long,
-    finVersion Long
-}
+
 
 entity Filiere {
 	niveau String required
@@ -82,12 +89,13 @@ relationship OneToMany {
 	Diplome{filiere} to Filiere,
 	Filiere{promotion} to Promotion,
     Etudiant{conventionStage} to ConventionStage,
-    Site{siege} to ConventionStage,
-    Site{lieuStage} to ConventionStage,
+    Site{siege} to ConventionStage{siege},
+    Site{lieuStage} to ConventionStage{lieuStage},
     Entreprise{entreprisePartenaire} to EntreprisePartenaire,
     Entreprise{site} to Site,
     Groupe{entreprise} to Entreprise,
-    Tuteur{conventionStage} to ConventionStage
+    Tuteur{conventionStage} to ConventionStage,
+    MaitreStage{conventionStage} to ConventionStage
 }
 
 // we have to manage the versioning of the promotion
