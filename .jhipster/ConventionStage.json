@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tuteur",
+            "otherEntityName": "tuteur",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "etudiant",
+            "otherEntityName": "etudiant",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "site",
+            "otherEntityName": "site",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "site",
+            "otherEntityName": "site",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "sujet",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fonctions",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "competences",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170125100550",
+    "entityTableName": "convention_stage",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl"
+}
