@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "diplome",
+            "otherEntityName": "diplome",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "promotion",
+            "otherEntityName": "promotion",
+            "otherEntityRelationshipName": "filiere"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "niveau",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170125143359",
+    "entityTableName": "filiere",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

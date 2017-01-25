@@ -1,0 +1,25 @@
+{
+    "crmisticApp": {
+        "entreprisePartenaire" : {
+            "home": {
+                "title": "Entreprise Partenaires",
+                "createLabel": "Create a new Entreprise Partenaire",
+                "createOrEditLabel": "Create or edit a Entreprise Partenaire",
+                "search": "Search for Entreprise Partenaire"
+            },
+            "created": "A new Entreprise Partenaire is created with identifier {{ param }}",
+            "updated": "A Entreprise Partenaire is updated with identifier {{ param }}",
+            "deleted": "A Entreprise Partenaire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Entreprise Partenaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Entreprise Partenaire"
+            },
+            "dateDebut": "Date Debut",
+            "dateFin": "Date Fin",
+            "entreprise": "Entreprise",
+            "diplome": "Diplome"
+        }
+    }
+}

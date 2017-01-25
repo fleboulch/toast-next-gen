@@ -1,0 +1,65 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "entreprisePartenaire",
+            "otherEntityName": "entreprisePartenaire",
+            "otherEntityRelationshipName": "entreprise"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "site",
+            "otherEntityName": "site",
+            "otherEntityRelationshipName": "entreprise"
+        },
+        {
+            "relationshipName": "groupe",
+            "otherEntityName": "groupe",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pays",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numSiret",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "numSiren",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debutVersion",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "finVersion",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170125143354",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "entreprise",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}
