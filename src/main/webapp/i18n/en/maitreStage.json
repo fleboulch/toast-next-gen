@@ -1,0 +1,30 @@
+{
+    "crmisticApp": {
+        "maitreStage" : {
+            "home": {
+                "title": "Maitre Stages",
+                "createLabel": "Create a new Maitre Stage",
+                "createOrEditLabel": "Create or edit a Maitre Stage",
+                "search": "Search for Maitre Stage"
+            },
+            "created": "A new Maitre Stage is created with identifier {{ param }}",
+            "updated": "A Maitre Stage is updated with identifier {{ param }}",
+            "deleted": "A Maitre Stage is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Maitre Stage {{ id }}?"
+            },
+            "detail": {
+                "title": "Maitre Stage"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "telephone": "Telephone",
+            "mail": "Mail",
+            "fonction": "Fonction",
+            "ancienEtudiant": "Ancien Etudiant",
+            "debutVersion": "Debut Version",
+            "finVersion": "Fin Version",
+            "conventionStage": "Convention Stage"
+        }
+    }
+}

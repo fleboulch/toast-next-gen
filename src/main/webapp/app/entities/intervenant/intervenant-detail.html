@@ -1,0 +1,45 @@
+
+<div>
+    <h2><span data-translate="crmisticApp.intervenant.detail.title">Intervenant</span> {{vm.intervenant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="crmisticApp.intervenant.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.intervenant.nom}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.intervenant.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.intervenant.prenom}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.intervenant.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{vm.intervenant.telephone}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.intervenant.mail">Mail</span></dt>
+        <dd>
+            <span>{{vm.intervenant.mail}}</span>
+        </dd>
+        <dt><span data-translate="crmisticApp.intervenant.diplome">Diplome</span></dt>
+        <dd>
+            <span ng-repeat="diplome in vm.intervenant.diplomes">
+                <a ui-sref="diplome-detail({id: diplome.id})">{{diplome.nom}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="crmisticApp.intervenant.entreprise">Entreprise</span></dt>
+        <dd>
+            <a ui-sref="entreprise-detail({id:vm.intervenant.entrepriseId})">{{vm.intervenant.entrepriseId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="intervenant-detail.edit({id:vm.intervenant.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

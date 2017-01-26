@@ -1,0 +1,89 @@
+<div>
+    <h2 data-translate="crmisticApp.intervenant.home.title">Intervenants</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="intervenant.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="crmisticApp.intervenant.home.createLabel">
+                        Create new Intervenant
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'crmisticApp.intervenant.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.nom">Nom</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.prenom">Prenom</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.telephone">Telephone</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.mail">Mail</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.diplome">Diplome</span></th>
+                    <th><span data-translate="crmisticApp.intervenant.entreprise">Entreprise</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="intervenant in vm.intervenants track by intervenant.id">
+                    <td><a ui-sref="intervenant-detail({id:intervenant.id})">{{intervenant.id}}</a></td>
+                    <td>{{intervenant.nom}}</td>
+                    <td>{{intervenant.prenom}}</td>
+                    <td>{{intervenant.telephone}}</td>
+                    <td>{{intervenant.mail}}</td>
+                    <td>
+                        <span ng-repeat="diplome in intervenant.diplomes">
+                            <a class="form-control-static" ui-sref="diplome-detail({id: diplome.id})">{{diplome.nom}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td>
+                        <a ui-sref="entreprise-detail({id:intervenant.entrepriseId})">{{intervenant.entrepriseId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="intervenant-detail({id:intervenant.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="intervenant.edit({id:intervenant.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="intervenant.delete({id:intervenant.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

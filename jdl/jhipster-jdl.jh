@@ -6,7 +6,22 @@ entity ConventionStage {
 	dateDebut ZonedDateTime,
     dateFin ZonedDateTime
 }
+
 entity Tuteur {
+	nom String,
+    prenom String,
+    telephone String,
+    mail String
+}
+
+entity Intervenant {
+	nom String,
+    prenom String,
+    telephone String,
+    mail String
+}
+
+entity MaitreStage {
 	nom String,
     prenom String,
     telephone String,
@@ -23,7 +38,6 @@ entity Etudiant {
     mail String,
     sexe String,
     numEtudiant String required
-
 }
 
 // an ignored comment
@@ -37,11 +51,13 @@ entity Entreprise {
     debutVersion Long,
     finVersion Long
 }
+
 entity Groupe {
 	nom String,
     debutVersion Long,
     finVersion Long
 }
+
 entity Site {
 	adresse String,
     codePostal String,
@@ -53,15 +69,15 @@ entity Site {
     finVersion Long
 }
 
-entity EntreprisePartenaire {
-	dateDebut ZonedDateTime,
-    dateFin ZonedDateTime
-}
-
 entity Diplome {
 	nom String required,
     debutVersion Long,
     finVersion Long
+}
+
+entity Partenariat {
+	dateDebut ZonedDateTime,
+    dateFin ZonedDateTime
 }
 
 entity Filiere {
@@ -73,8 +89,9 @@ entity Promotion {
 }
 
 relationship ManyToMany {
-	EntreprisePartenaire{diplome(nom)} to Diplome{entreprisePartenaire},
-    Etudiant{diplome(nom)} to Diplome{etudiant}
+	Partenariat{diplome(nom)} to Diplome{partenariat},
+    Etudiant{diplome(nom)} to Diplome{etudiant},
+    Intervenant{diplome(nom)} to Diplome{intervenant}
 }
 
 // defining multiple OneToMany relationships with comments
@@ -82,12 +99,14 @@ relationship OneToMany {
 	Diplome{filiere} to Filiere,
 	Filiere{promotion} to Promotion,
     Etudiant{conventionStage} to ConventionStage,
-    Site{siege} to ConventionStage,
-    Site{lieuStage} to ConventionStage,
-    Entreprise{entreprisePartenaire} to EntreprisePartenaire,
+    Site{siege} to ConventionStage{siege},
+    Site{lieuStage} to ConventionStage{lieuStage},
+    Entreprise{partenariat} to Partenariat,
     Entreprise{site} to Site,
+    Entreprise{intervenant} to Intervenant,
     Groupe{entreprise} to Entreprise,
-    Tuteur{conventionStage} to ConventionStage
+    Tuteur{conventionStage} to ConventionStage,
+    MaitreStage{conventionStage} to ConventionStage
 }
 
 // we have to manage the versioning of the promotion
