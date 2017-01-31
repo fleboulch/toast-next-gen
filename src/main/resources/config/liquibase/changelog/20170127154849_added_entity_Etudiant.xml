@@ -27,26 +27,26 @@
             <column name="nom" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="prenom" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="mail" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="sexe" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="num_etudiant" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
-        
+
         <createTable tableName="etudiant_diplome">
             <column name="diplomes_id" type="bigint">
                 <constraints nullable="false"/>
@@ -57,6 +57,6 @@
         </createTable>
 
         <addPrimaryKey columnNames="etudiants_id, diplomes_id" tableName="etudiant_diplome"/>
-        
+
     </changeSet>
 </databaseChangeLog>
