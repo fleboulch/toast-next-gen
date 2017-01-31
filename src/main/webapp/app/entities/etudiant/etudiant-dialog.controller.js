@@ -17,27 +17,6 @@
         vm.filieres = Filiere.query();
         vm.promotions = Promotion.query();
 
-        $scope.checkDiplome = function () {
-            console.log("yolo");
-            if (vm.etudiant.diplome == null) {
-                vm.showFiliere = false;
-            } else {
-                vm.showFiliere = true;
-            }
-        };
-
-        $scope.checkFiliere = function() {
-            console.log("test");
-
-            if (vm.etudiant.filiere == null) {
-                vm.showPromotion = false;
-            }
-        };
-
-        // vm.checkDiplome();
-        // vm.checkFiliere();
-
-
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
         });
