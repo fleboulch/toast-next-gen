@@ -9,6 +9,7 @@
 
     function EtudiantDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Etudiant, ConventionStage, Promotion, Diplome, Filiere) {
         var vm = this;
+
         vm.etudiant = entity;
         vm.clear = clear;
         vm.save = save;
@@ -43,5 +44,7 @@
         function onSaveError () {
             vm.isSaving = false;
         }
+
+
     }
 })();
