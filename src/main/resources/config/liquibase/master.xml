@@ -8,6 +8,7 @@
     <include file="classpath:config/liquibase/changelog/20170127154846_added_entity_ConventionStage.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170127154847_added_entity_Tuteur.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170127154848_added_entity_Professionnel.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170127154849_added_entity_Etudiant.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170127154850_added_entity_Entreprise.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170127154851_added_entity_Groupe.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170127154852_added_entity_Site.xml" relativeToChangelogFile="false"/>
