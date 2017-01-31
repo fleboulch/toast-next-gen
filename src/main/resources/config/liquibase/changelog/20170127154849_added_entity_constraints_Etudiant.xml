@@ -9,15 +9,15 @@
     <changeSet id="20170127154849-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="etudiants_id"
-                                 baseTableName="etudiant_diplome"
-                                 constraintName="fk_etudiant_diplome_etudiants_id"
+                                 baseTableName="etudiant_promotion"
+                                 constraintName="fk_etudiant_promotion_etudiants_id"
                                  referencedColumnNames="id"
                                  referencedTableName="etudiant"/>
-        <addForeignKeyConstraint baseColumnNames="diplomes_id"
-                                 baseTableName="etudiant_diplome"
-                                 constraintName="fk_etudiant_diplome_diplomes_id"
+        <addForeignKeyConstraint baseColumnNames="promotions_id"
+                                 baseTableName="etudiant_promotion"
+                                 constraintName="fk_etudiant_promotion_promotions_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="diplome"/>
+                                 referencedTableName="promotion"/>
         
     </changeSet>
 </databaseChangeLog>
