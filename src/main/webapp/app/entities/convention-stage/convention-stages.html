@@ -58,19 +58,19 @@
                     <td>{{conventionStage.dateFin | date:'medium'}}</td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="etudiant-detail({id:conventionStage.etudiantId})">{{conventionStage.etudiantNom}}</a>
-                        <span has-authority="ROLE_USER, !ROLE_ADMIN">{{conventionStage.etudiantNom}}</span>
+                        <span ng-if="vm.account.login === 'user'">{{conventionStage.etudiantNom}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="site-detail({id:conventionStage.lieuStageId})">{{conventionStage.lieuStageAdresse}}</a>
-                        <span has-authority="ROLE_USER, !ROLE_ADMIN">{{conventionStage.lieuStageAdresse}}</span>
+                        <span ng-if="vm.account.login === 'user'">{{conventionStage.lieuStageAdresse}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="tuteur-detail({id:conventionStage.tuteurId})">{{conventionStage.tuteurNom}}</a>
-                        <span has-authority="ROLE_USER, !ROLE_ADMIN">{{conventionStage.tuteurNom}}</span>
+                        <span ng-if="vm.account.login === 'user'">{{conventionStage.tuteurNom}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="professionnel-detail({id:conventionStage.maitreStageId})">{{conventionStage.maitreStageNom}}</a>
-                        <span has-authority="ROLE_USER, !ROLE_ADMIN">{{conventionStage.maitreStageNom}}</span>
+                        <span ng-if="vm.account.login === 'user'">{{conventionStage.maitreStageNom}}</span>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
