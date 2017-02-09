@@ -45,6 +45,7 @@
                     <th jh-sort-by="lieuStageAdresse"><span data-translate="crmisticApp.conventionStage.lieuStage">Lieu Stage</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="tuteurNom"><span data-translate="crmisticApp.conventionStage.tuteur">Tuteur</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="maitreStageNom"><span data-translate="crmisticApp.conventionStage.maitreStage">Maitre Stage</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lieuStage.entrepriseSite.nom"><span data-translate="crmisticApp.conventionStage.entreprise">Entreprise </span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -58,20 +59,25 @@
                     <td>{{conventionStage.dateFin | date:'medium'}}</td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="etudiant-detail({id:conventionStage.etudiantId})">{{conventionStage.etudiantNom}}</a>
-                        <span ng-if="vm.account.login === 'user'">{{conventionStage.etudiantNom}}</span>
+                        <span ng-if="vm.account.authorities.indexOf('ROLE_ADMIN') === -1">{{conventionStage.etudiantNom}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="site-detail({id:conventionStage.lieuStageId})">{{conventionStage.lieuStageAdresse}}</a>
-                        <span ng-if="vm.account.login === 'user'">{{conventionStage.lieuStageAdresse}}</span>
+                        <span ng-if="vm.account.authorities.indexOf('ROLE_ADMIN') === -1">{{conventionStage.lieuStageAdresse}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="tuteur-detail({id:conventionStage.tuteurId})">{{conventionStage.tuteurNom}}</a>
-                        <span ng-if="vm.account.login === 'user'">{{conventionStage.tuteurNom}}</span>
+                        <span ng-if="vm.account.authorities.indexOf('ROLE_ADMIN') === -1">{{conventionStage.tuteurNom}}</span>
                     </td>
                     <td>
                         <a has-authority="ROLE_ADMIN" ui-sref="professionnel-detail({id:conventionStage.maitreStageId})">{{conventionStage.maitreStageNom}}</a>
-                        <span ng-if="vm.account.login === 'user'">{{conventionStage.maitreStageNom}}</span>
+                        <span ng-if="vm.account.authorities.indexOf('ROLE_ADMIN') === -1">{{conventionStage.maitreStageNom}}</span>
                     </td>
+                    <td>
+                        <a has-authority="ROLE_ADMIN" ui-sref="entreprise-detail({id:conventionStage.entreprise.id})">{{conventionStage.entreprise.nom}}</a>
+                        <span ng-if="vm.account.authorities.indexOf('ROLE_ADMIN') === -1">{{conventionStage.entreprise.nom}}</span>
+                    </td>
+
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
