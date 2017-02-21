@@ -8,3 +8,4 @@ Documentation index
 * [JHipster documentation](doc/jhipster.md)
 * [Entity versioning - JBoss Envers](doc/entity-versioning.md)
 * [FAQ](doc/faq.md)
+* [Improvements](doc/improvements.md)

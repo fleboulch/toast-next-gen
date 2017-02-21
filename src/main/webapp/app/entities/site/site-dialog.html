@@ -44,12 +44,6 @@
                      />
         </div>
         <div class="form-group">
-            <label data-translate="crmisticApp.site.entrepriseSiege" for="field_entrepriseSiege">Entreprise Siege</label>
-            <select class="form-control" id="field_entrepriseSiege" name="entrepriseSiege" ng-model="vm.site.entrepriseSiegeId" ng-options="entreprise.id as entreprise.nom for entreprise in vm.entreprisesieges | orderBy:'id'">
-                <option value=""></option>
-            </select>
-        </div>
-        <div class="form-group">
             <label data-translate="crmisticApp.site.entrepriseSite" for="field_entrepriseSite">Entreprise Site</label>
             <select class="form-control" id="field_entrepriseSite" name="entrepriseSite" ng-model="vm.site.entrepriseSiteId" ng-options="entreprise.id as entreprise.nom for entreprise in vm.entreprises"            >
                 <option value=""></option>
